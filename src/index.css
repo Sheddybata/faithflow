@@ -1,0 +1,235 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode - FaithFlow Blue Theme */
+    --background: 220 20% 98%;
+    --foreground: 220 25% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 25%;
+
+    /* Primary - FaithFlow Blue */
+    --primary: 220 70% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Light Blue */
+    --secondary: 220 30% 90%;
+    --secondary-foreground: 220 25% 25%;
+
+    --muted: 220 20% 96%;
+    --muted-foreground: 220 15% 45%;
+
+    /* Accent - Soft Blue */
+    --accent: 220 25% 85%;
+    --accent-foreground: 220 25% 25%;
+
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 90%;
+    --input: 220 20% 90%;
+    --ring: 220 70% 50%;
+
+    --radius: 1rem;
+
+    /* Faith-specific colors - FaithFlow Blue Theme */
+    --faith-primary: 220 70% 50%;
+    --faith-secondary: 220 30% 90%;
+    --faith-accent: 220 25% 85%;
+    --faith-success: 150 50% 60%;
+    --faith-warning: 45 80% 70%;
+    --faith-error: 0 70% 60%;
+    
+    /* Prayer-specific colors - Purple/Lavender Theme */
+    --prayer-primary: 270 60% 60%;
+    --prayer-secondary: 270 40% 85%;
+    --prayer-accent: 270 50% 75%;
+
+    /* Reading-specific colors */
+    --reading-bg: 220 20% 98%;
+    --reading-text: 220 25% 25%;
+    --reading-highlight: 220 30% 90%;
+    --reading-progress: 220 70% 50%;
+
+    --sidebar-background: 220 25% 95%;
+    --sidebar-foreground: 220 25% 25%;
+    --sidebar-primary: 220 70% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 90%;
+    --sidebar-accent-foreground: 220 25% 25%;
+    --sidebar-border: 220 20% 90%;
+    --sidebar-ring: 220 70% 50%;
+  }
+
+  .dark {
+    /* Dark Mode - FaithFlow Blue Theme */
+    --background: 220 25% 10%;
+    --foreground: 220 20% 90%;
+
+    --card: 220 25% 12%;
+    --card-foreground: 220 20% 90%;
+
+    --popover: 220 25% 12%;
+    --popover-foreground: 220 20% 90%;
+
+    /* Primary - FaithFlow Blue */
+    --primary: 220 70% 60%;
+    --primary-foreground: 220 25% 10%;
+
+    /* Secondary - Deep Blue */
+    --secondary: 220 30% 20%;
+    --secondary-foreground: 220 20% 90%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 15% 70%;
+
+    /* Accent - Deep Blue */
+    --accent: 220 25% 25%;
+    --accent-foreground: 220 20% 90%;
+
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 220 20% 90%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 220 70% 60%;
+
+    /* Faith-specific colors - Dark Blue */
+    --faith-primary: 220 70% 60%;
+    --faith-secondary: 220 30% 20%;
+    --faith-accent: 220 25% 25%;
+    --faith-success: 150 40% 40%;
+    --faith-warning: 45 60% 50%;
+    --faith-error: 0 60% 50%;
+
+    /* Reading-specific colors - Dark */
+    --reading-bg: 220 25% 10%;
+    --reading-text: 220 20% 90%;
+    --reading-highlight: 220 30% 30%;
+    --reading-progress: 220 70% 60%;
+
+    --sidebar-background: 220 25% 15%;
+    --sidebar-foreground: 220 20% 90%;
+    --sidebar-primary: 220 70% 60%;
+    --sidebar-primary-foreground: 220 25% 10%;
+    --sidebar-accent: 220 20% 25%;
+    --sidebar-accent-foreground: 220 20% 90%;
+    --sidebar-border: 220 20% 25%;
+    --sidebar-ring: 220 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans dark:bg-background dark:text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  pre, code {
+    @apply font-mono;
+  }
+
+  /* Faith-specific typography */
+  .faith-heading {
+    @apply font-semibold text-foreground;
+  }
+
+  .faith-text {
+    @apply text-foreground leading-relaxed;
+  }
+
+  .faith-verse {
+    @apply text-lg leading-relaxed font-medium;
+  }
+
+  .faith-highlight {
+    @apply bg-faith-primary/20 dark:bg-faith-primary/20 text-faith-primary dark:text-faith-primary;
+  }
+
+  /* Reading progress styles */
+  .reading-progress {
+    @apply bg-faith-primary/20 dark:bg-faith-primary/20;
+  }
+
+  .reading-progress-fill {
+    @apply bg-faith-primary dark:bg-faith-primary;
+  }
+
+  /* Streak counter styles */
+  .streak-counter {
+    @apply bg-gradient-to-r from-faith-success to-faith-primary text-white;
+  }
+
+  /* Journal form styles */
+  .journal-input {
+    @apply bg-card border-border focus:ring-2 focus:ring-faith-primary/20;
+  }
+
+  /* Mobile-first responsive design */
+  @media (max-width: 768px) {
+    .faith-verse {
+      @apply text-base;
+    }
+    
+    /* Mobile-specific header spacing */
+    .content-with-fixed-header {
+      @apply pt-40;
+    }
+  }
+
+  /* Glass morphism utilities */
+  .glass-morphism {
+    @apply bg-background/90 backdrop-blur-md border border-border/50 shadow-lg;
+  }
+
+  .glass-morphism-light {
+    @apply bg-background/80 backdrop-blur-sm border border-border/30 shadow-md;
+  }
+
+  /* Fixed header spacing utilities */
+  .content-with-fixed-header {
+    @apply pt-32;
+  }
+
+  .content-with-fixed-header-mobile {
+    @apply pt-40;
+  }
+}
+
+/* Custom scrollbar for better mobile experience */
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted-foreground)) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--muted-foreground));
+    border-radius: 3px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--muted-foreground) / 0.8);
+  }
+}
