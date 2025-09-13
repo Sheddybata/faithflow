@@ -35,11 +35,11 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
           muted
           playsInline
           onLoadedData={handleVideoLoad}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain"
           style={{ 
             maxWidth: '100vw',
             maxHeight: '100vh',
-            objectFit: 'cover'
+            objectFit: 'contain'
           }}
         >
           <source src="/FaithFlow intro video.mp4" type="video/mp4" />

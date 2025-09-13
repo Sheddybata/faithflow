@@ -51,7 +51,7 @@ const AuthScreen: React.FC = () => {
   };
 
   return (
-    <div className="h-screen w-screen bg-gradient-to-br from-faith-primary via-faith-primary/90 to-faith-primary/80 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-faith-primary via-faith-primary/90 to-faith-primary/80 flex flex-col">
       {/* Status Bar */}
       <div className="flex justify-between items-center px-6 pt-4 text-white text-sm">
         <span>9:41</span>
@@ -66,15 +66,15 @@ const AuthScreen: React.FC = () => {
       <div className="flex-1 flex flex-col justify-center px-4 sm:px-6 pb-6 sm:pb-8">
         <div className="text-center space-y-3 mb-6 sm:mb-8">
           {/* FaithFlow Logo */}
-          <div className="flex justify-center mb-1 sm:mb-2">
+          <div className="flex justify-center mb-2">
             <img 
               src="/New FaithFlow logo.png" 
               alt="FaithFlow Logo" 
-              className="w-24 h-24 sm:w-40 sm:h-40 object-contain drop-shadow-lg"
+              className="w-32 h-32 sm:w-40 sm:h-40 object-contain drop-shadow-lg"
             />
           </div>
-          <h1 className="text-xl sm:text-2xl font-bold text-white">Hello!</h1>
-          <p className="text-base sm:text-lg text-white/90">Welcome to FaithFlow</p>
+          <h1 className="text-2xl font-bold text-white">Hello!</h1>
+          <p className="text-lg text-white/90">Welcome to FaithFlow</p>
         </div>
 
         {/* Plant Illustration Placeholder */}

@@ -17,7 +17,7 @@ const AppLayout: React.FC = () => {
   }
 
   return (
-    <div className="h-screen w-screen overflow-hidden">
+    <div className="min-h-screen w-full">
       <Navigation />
     </div>
   );
