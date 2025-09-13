@@ -68,16 +68,16 @@ const LeaderboardScreen: React.FC = () => {
   const renderUserRow = (userData: any, index: number) => (
     <div
       key={userData.id}
-      className={`flex items-center justify-between p-4 rounded-xl transition-all duration-200 ${
+      className={`flex items-center justify-between p-3 sm:p-4 rounded-xl transition-all duration-200 ${
         userData.isCurrentUser 
           ? 'bg-faith-primary/10 border-2 border-faith-primary/30 shadow-md' 
           : 'bg-white border border-gray-200 hover:shadow-md hover:border-faith-primary/20'
       }`}
     >
       {/* User Info */}
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-2 sm:space-x-4">
       {/* Avatar */}
-        <Avatar className="h-12 w-12">
+        <Avatar className="h-10 w-10 sm:h-12 sm:w-12">
         <AvatarImage src={userData.avatar} alt={userData.name} />
           <AvatarFallback className="bg-faith-primary text-white text-lg font-semibold">
           {userData.name.charAt(0).toUpperCase()}
@@ -118,10 +118,10 @@ const LeaderboardScreen: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto p-4 space-y-6 content-with-fixed-header">
+      <div className="max-w-4xl mx-auto p-2 sm:p-4 space-y-4 sm:space-y-6 content-with-fixed-header">
       {/* Header */}
-        <div className="text-center py-6">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Community Leaderboard</h1>
+        <div className="text-center py-4 sm:py-6">
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Community Leaderboard</h1>
           <p className="text-gray-600">Top readers from around the world</p>
       </div>
 

@@ -63,8 +63,8 @@ const AuthScreen: React.FC = () => {
       </div>
 
       {/* Header Section */}
-      <div className="flex-1 flex flex-col justify-center px-6 pb-8">
-        <div className="text-center space-y-3 mb-8">
+      <div className="flex-1 flex flex-col justify-center px-4 sm:px-6 pb-6 sm:pb-8">
+        <div className="text-center space-y-3 mb-6 sm:mb-8">
           {/* FaithFlow Logo */}
           <div className="flex justify-center mb-2">
             <img 
@@ -86,7 +86,7 @@ const AuthScreen: React.FC = () => {
       </div>
 
       {/* Main Content Card */}
-      <div className="bg-gray-100 dark:bg-gray-800 rounded-t-3xl p-6 space-y-6">
+      <div className="bg-gray-100 dark:bg-gray-800 rounded-t-3xl p-4 sm:p-6 space-y-4 sm:space-y-6">
         {/* Navigation */}
         {isSignUp && (
           <div className="flex items-center space-x-2 text-faith-primary">

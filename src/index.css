@@ -186,7 +186,17 @@
     
     /* Mobile-specific header spacing */
     .content-with-fixed-header {
-      @apply pt-40;
+      @apply pt-24;
+    }
+    
+    /* Reduce mobile padding */
+    .mobile-padding {
+      @apply p-2;
+    }
+    
+    /* Mobile-specific spacing */
+    .mobile-space-y {
+      @apply space-y-3;
     }
   }
 
@@ -201,11 +211,11 @@
 
   /* Fixed header spacing utilities */
   .content-with-fixed-header {
-    @apply pt-32;
+    @apply pt-24 sm:pt-32;
   }
 
   .content-with-fixed-header-mobile {
-    @apply pt-40;
+    @apply pt-24;
   }
 }
 

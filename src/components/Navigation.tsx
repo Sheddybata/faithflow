@@ -145,7 +145,7 @@ const Navigation: React.FC = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Main Content Area */}
-      <div className="pb-20">
+      <div className="pb-20 sm:pb-24">
         {renderScreen()}
       </div>
 
@@ -213,12 +213,12 @@ const Navigation: React.FC = () => {
 
       {/* Progress Indicator - Now clickable to show profile */}
       {currentScreen === 'home' && user && (
-        <div className="fixed top-2 left-2 right-2 sm:top-4 sm:left-4 sm:right-4 z-50">
+        <div className="fixed top-1 left-1 right-1 sm:top-4 sm:left-4 sm:right-4 z-50">
           <Card 
             className="glass-morphism border-faith-primary/20 cursor-pointer hover:shadow-lg transition-shadow"
             onClick={() => setCurrentScreen('profile')}
           >
-            <CardContent className="p-4">
+            <CardContent className="p-3 sm:p-4">
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center space-x-3">
                   <Avatar className="h-10 w-10">
