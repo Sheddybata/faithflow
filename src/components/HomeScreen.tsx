@@ -27,11 +27,11 @@ const HomeScreen: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 p-2 sm:p-4 space-y-4 sm:space-y-6 pt-20 sm:pt-32">
+    <div className="h-full w-full bg-gradient-to-br from-gray-50 to-blue-50 p-1 sm:p-2 space-y-2 sm:space-y-4 pt-16 sm:pt-20">
       {/* Welcome Header */}
-      <div className="text-center space-y-2">
-        <h1 className="text-2xl font-bold text-gray-900">Welcome back, {user.name}</h1>
-        <p className="text-gray-600">Continue your spiritual journey</p>
+      <div className="text-center space-y-1 sm:space-y-2">
+        <h1 className="text-lg sm:text-2xl font-bold text-gray-900">Welcome back, {user.name}</h1>
+        <p className="text-sm sm:text-base text-gray-600">Continue your spiritual journey</p>
       </div>
 
       {/* Today's Reading */}

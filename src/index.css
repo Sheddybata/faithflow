@@ -133,9 +133,21 @@
     @apply border-border;
   }
 
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
   body {
     @apply bg-background text-foreground font-sans dark:bg-background dark:text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  #root {
+    height: 100%;
+    width: 100%;
   }
 
   pre, code {
@@ -184,19 +196,13 @@
       @apply text-base;
     }
     
-    /* Mobile-specific header spacing */
-    .content-with-fixed-header {
-      @apply pt-24;
-    }
-    
-    /* Reduce mobile padding */
-    .mobile-padding {
-      @apply p-2;
-    }
-    
     /* Mobile-specific spacing */
+    .mobile-padding {
+      @apply p-1;
+    }
+    
     .mobile-space-y {
-      @apply space-y-3;
+      @apply space-y-2;
     }
   }
 
@@ -211,11 +217,7 @@
 
   /* Fixed header spacing utilities */
   .content-with-fixed-header {
-    @apply pt-24 sm:pt-32;
-  }
-
-  .content-with-fixed-header-mobile {
-    @apply pt-24;
+    @apply pt-16 sm:pt-20;
   }
 }
 

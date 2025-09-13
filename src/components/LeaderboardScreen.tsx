@@ -117,12 +117,12 @@ const LeaderboardScreen: React.FC = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto p-2 sm:p-4 space-y-4 sm:space-y-6 content-with-fixed-header">
+    <div className="h-full w-full bg-gray-50">
+      <div className="h-full w-full p-1 sm:p-2 space-y-2 sm:space-y-4 pt-16 sm:pt-20">
       {/* Header */}
-        <div className="text-center py-4 sm:py-6">
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Community Leaderboard</h1>
-          <p className="text-gray-600">Top readers from around the world</p>
+        <div className="text-center py-2 sm:py-4">
+          <h1 className="text-xl sm:text-2xl font-bold text-gray-900 mb-1 sm:mb-2">Community Leaderboard</h1>
+          <p className="text-sm sm:text-base text-gray-600">Top readers from around the world</p>
       </div>
 
         {/* Leaderboard */}

@@ -143,9 +143,9 @@ const Navigation: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="h-screen w-screen bg-background flex flex-col">
       {/* Main Content Area */}
-      <div className="pb-20 sm:pb-24">
+      <div className="flex-1 overflow-y-auto pb-16 sm:pb-20">
         {renderScreen()}
       </div>
 
